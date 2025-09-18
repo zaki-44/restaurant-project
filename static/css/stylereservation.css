@@ -1,0 +1,70 @@
+
+body{
+  
+    background: linear-gradient(to bottom, #ada76e, #767247);
+     background-repeat: no-repeat; 
+     height: 100vh; 
+     overflow-y:hidden;
+}
+.hook{
+    margin-left: 80px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    
+  
+}
+.container{
+  border: solid;
+  border-radius: 20px;
+  border-color: black;
+   width: fit-content; 
+  padding: 20px;
+  margin: auto;
+  background-color: #ada76e;
+}
+
+.btn-submit{
+    border-color:black ;
+    border-radius: 10px;
+    background-color: black;
+    color: #ada76e;
+    width: fit-content;
+    font-size: 1.5em;
+    padding: 7px;
+    margin-left: 2.5em;
+} 
+
+.btn-submit:hover{
+    background-color: #ada76e;
+    color: black;
+}
+.form-label{
+    margin-right: 20px;
+    font-size: 15px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+   
+    font-style: normal;
+  
+}
+.form-value{
+    border-radius: 10px;
+    padding: 5px;
+  font-size: 15px;
+}
+.notes-value{
+    
+   
+    border-radius: 10px;
+    padding: 5px;
+  font-size: 15px;
+    margin-top: 20px;
+    
+
+}
+.error-form{
+  color: red;
+}
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Cantine</title>
+  
+  <!-- fonts men google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yeseva+One&family=Monoton&display=swap" rel="stylesheet">
+
+  <!-- fichier css externe -->
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <h1 id="logo">LA CANTINE</h1>
+    <img class="image_lacantine_svg" src="/static/images/logo_amine_svg.png">
+    
+    <ul class="nav-links">
+      <li class="home"><a href="#">Home</a></li>
+      <li><a href="#">notre histoire</a></li>
+      <li><a href="{{ url_for('reservation') }}">reservation</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="{{ url_for('menu') }}">menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- video background -->
+  <video class="frstvid" autoplay loop muted playsinline>
+    <source src="/static/images/4555805-uhd_3840_2160_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- texte d’accueil -->
+  <h3 id="Bienvenue">Bienvenue chez Amine La Cantine — Une expérience culinaire inoubliable</h3>
+  
+  <h1 class="bestseller">Découvrez notre bestseller !</h1>
+
+  <!-- videos produits -->
+  <video class="aminevideo" autoplay loop muted playsinline>
+    <source src="../static/images/bestseller.mp4" type="video/mp4">
+  </video>
+  <video class="aminevideo2" autoplay loop muted playsinline>
+    <source src="../static/images/chinwi1.mp4" type="video/mp4">
+  </video>
+  <video class="aminevideo3" autoplay loop muted playsinline>
+    <source src="../static/images/chinwi2.mp4" type="video/mp4">
+  </video>
+
+  <h3 id="horaire">Nos horaires</h3>
+  
+  <p class="horaires">Samedi 11h:30 -  23h:30 </p>
+  <p class="horaires">Dimanche 11h:30 -  23h:30 </p>
+  <p class="horaires">Lundi 11h:30 -  23h:30 </p>
+  <p class="horaires">Mardi 11h:30 -  23h:30 </p>
+  <p class="horaires">Mercredi 11h:30 -  23h:30 </p>
+  <p class="horaires">Jeudi 11h:30 -  23h:30 </p>
+  <p class="horaires">Vendredi 15h:30 -  23h:30 </p>
+ 
+
+  <!-- texte depuis -->
+  <h1 class="depuis">
+    Depuis 2021, nous préservons la même qualité exceptionnelle<br> 
+    et la même ambiance chaleureuse <br>
+    qui font la renommée d’Amine La Cantine.
+  </h1>
+
+  <!-- bouton menu -->
+  <div class="btn-container">
+    <a class="ctabtn" href="{{ url_for('menu') }}">voir le menu</a>
+    <a class="ctabtn" href="{{ url_for('reservation') }}">faire un reservation</a>
+  </div>
+  
+
+<!-- pied de page -->
+<footer class="pied_de_page">
+  <!-- Logo -->
+  <div class="colonne">
+    <img class="image_lacantine" src="/static/images/logo_amine.png" alt="Logo Amine La Cantine">
+  </div>
+
+  <!-- Adresses -->
+  <div class="colonne texte_adresse">
+    <h3>Où sommes-nous ?</h3>
+    <p>
+      <img class="maps" src="../static/images/maps_logo.png" alt="Maps logo">
+      <a target="_blank" class="a_tags" href="https://maps.app.goo.gl/pXwmHHzTbZz3c9Rs8">Hydra - Voir la carte</a>
+    </p>
+    <p>
+      <img class="maps" src="../static/images/maps_logo.png" alt="Maps logo">
+      <a target="_blank" class="a_tags" href="https://maps.app.goo.gl/w1spLWZ9cZaKoE7V8">Staoueli - Voir la carte</a>
+    </p>
+  </div>
+
+  <!-- Contact -->
+  <div class="colonne contact">
+    <h3>Nous contacter</h3>
+    <p>
+      <img class="instagram" src="/static/images/instagram.png" alt="Instagram logo">
+      <a id="instagram" target="_blank" href="https://www.instagram.com/amine_la_cantine/">Instagram</a>
+    </p>
+    <p>📍 Hydra: 0 20 30 77 77 -- 06 66 19 93 17</p>
+    <p>📍 Staoueli: 05 60 09 73 92</p>
+  </div>
+
+  
+    <p>made with ❤️ by  @</p> <br>
+     <a  target="_blank" href="https://api.whatsapp.com/send/?phone=%2B213549337621&text&type=phone_number&app_absent=0">  zaki</a><br>
+  
+</footer>
+
+
+</body>
+</html>

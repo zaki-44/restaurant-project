@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="../static/css/stylereservation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="hook">Le goût de l’excellence commence par une réservation </h1>
+
+    <form class="container" method="post">
+        {{ form.csrf_token }}
+
+        <p>
+            {{ form.nom.label(class="form-label") }} 
+            {{ form.nom(class="form-value") }}
+            {% for error in form.nom.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.prenom.label(class="form-label") }} 
+            {{ form.prenom(class="form-value") }}
+            {% for error in form.prenom.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.type_reservation.label(class="form-label") }} 
+            {{ form.type_reservation(class="form-value") }}
+            {% for error in form.type_reservation.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.telephone.label(class="form-label") }} 
+            {{ form.telephone(class="form-value") }}
+            {% for error in form.telephone.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.nbr.label(class="form-label") }} 
+            {{ form.nbr(class="form-value") }}
+            {% for error in form.nbr.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.jour.label(class="form-label") }} 
+            {{ form.jour(class="form-value") }}
+            {% for error in form.jour.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.heure.label(class="form-label") }} 
+            {{ form.heure(class="form-value") }}
+            {% for error in form.heure.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.notes.label(class="form-label") }}<br> 
+            {{ form.notes(rows=4, cols=40, class="notes-value") }}
+            {% for error in form.notes.errors %}
+                <span class="error-form">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>{{ form.submit(class="btn-submit") }}</p>
+    </form>
+</body>
+</html>

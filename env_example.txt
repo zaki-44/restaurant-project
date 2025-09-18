@@ -1,0 +1,5 @@
+# Copy this file to .env and fill in your values
+SECRET_KEY=your-secret-key-here
+DATABASE_URL=sqlite:///amine.db
+
+# For production deployment, these will be set by your hosting platform
