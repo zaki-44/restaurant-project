@@ -12,6 +12,14 @@
 <body>
     <h1 class="hook">Le goût de l’excellence commence par une réservation </h1>
 
+
+    <!-- Home Button -->
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="{{ url_for('home') }}" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #b2b5c1 0%, #090310 100%); color: white; text-decoration: none; border-radius: 25px; font-family: 'Roboto Mono', monospace; font-size: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+            🏠 Retour à l'accueil
+        </a>
+    </div>
+
     <form class="container" method="post">
         {{ form.csrf_token }}
 

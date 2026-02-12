@@ -39,26 +39,32 @@ def admin():
 def reservation():
     form = ReservationForm()
     if form.validate_on_submit():
+        # First create the client
+        new_client = Client(
+            nom=form.nom.data,
+            prenom=form.prenom.data,
+            telephone=form.telephone.data,
+        )
+        db.session.add(new_client)
+        db.session.flush()  # Generate the client.id before creating reservation
+        
+        # Then create the reservation linked to the client
         new_reservation = Reservation(
             type_reservation=form.type_reservation.data,
             nbr_person=form.nbr.data,
             date=form.jour.data,
             heure=form.heure.data,
-            notes=form.notes.data
+            notes=form.notes.data,
+            client_id=new_client.id  # Link to the client
         )
-        new_client=Client(
-            nom=form.nom.data,
-            prenom=form.prenom.data,
-            telephone=form.telephone.data,
-        )
-
+        
         db.session.add(new_reservation)
-        db.session.add(new_client)
         db.session.commit()
 
         return render_template('merci.html')
 
     return render_template('reservation.html', form=form)
+
 
 
 # @app.route("/books")
